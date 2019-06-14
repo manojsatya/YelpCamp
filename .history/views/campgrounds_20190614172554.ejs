@@ -1,0 +1,50 @@
+<% include partials/header %>
+
+<nav class="navbar bg-light">
+    <a class = "navbar-brand" href="">YelpCamp</a>
+    <div class="navbar-right mr-sm-2">
+        <a class = "mr-sm-4" href="">Login</a>
+        <a class = "mr-sm-4" href="">Sign Up</a>
+        <a class = "mr-sm-4" href="">Logout</a>
+    </div>
+
+</nav>
+
+<nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand">Navbar</a>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+ </nav>
+
+<div class="container">
+        <header class="jumbotron">
+            <div class="container">
+                    <h1>Welcome to YelpCamp!</h1>
+                    <p>View our hand-picked campgrounds from all over the world</p>
+                    <p>
+                        <a class = "btn btn-primary btn-lg" href="/campgrounds/new">Add new Campgrounds</a>
+                    </p>
+            </div>               
+                     
+        </header>
+
+        <div class="row text-center">
+                <% campgrounds.forEach(function(campground){ %>
+                    <div class="col-sm-6 col-md-3">                       
+                         <img src="<%= campground.image %>" class="img-thumbnail img-fluid">
+                         <div class="caption">
+                                <h6><%= campground.name %></h6>
+                         </div>                       
+                    </div>
+                    
+                <% }); %>
+            
+        </div>
+        
+
+
+</div>
+
+<% include partials/footer %>

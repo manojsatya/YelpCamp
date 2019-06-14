@@ -1,0 +1,22 @@
+<% include partials/header %>
+
+<nav class="navbar navbar-light bg-light">
+        <a class = "navbar-brand" href="">YelpCamp</a>
+        <div class="navbar-right mr-sm-2">
+            <a class = "mr-sm-4" href="">Login</a>
+            <a class = "mr-sm-4" href="">Sign Up</a>
+            <a class = "mr-sm-4" href="">Logout</a>
+        </div>
+    
+    </nav>
+
+<h1>Create a new Campground</h1>
+
+<form action="/campgrounds" method="POST">
+    <input type="text" name="name" id="" placeholder="name">
+    <input type="text" name="image" id="" placeholder="image url">
+    <button> Submit!</button>
+
+</form>
+
+<% include partials/footer %>
